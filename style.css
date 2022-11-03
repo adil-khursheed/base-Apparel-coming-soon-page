@@ -45,8 +45,9 @@ main{
 }
 
 .left-col h1{
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 600;
+    line-height: 1.5;
     text-transform: uppercase;
     letter-spacing: 15px;
     color: var(--dark-grayish-red);
@@ -58,7 +59,7 @@ main{
 }
 
 .left-col p{
-    font-size: 0.9rem;
+    font-size: clamp(0.75rem, 3vw, 0.9rem);
     word-spacing: 1.5px;
     margin: 1.2rem 0;
     line-height: 1.8;
@@ -148,3 +149,64 @@ main{
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 } */
+
+
+@media only screen and (max-width: 1024px){
+
+    header{
+        padding: 4rem 6rem;
+    }
+    .left-col{
+        width: 50%;
+        padding: 10rem 6rem;
+    }
+
+    .right-col{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 930px){
+    main{
+        flex-direction: column-reverse;
+    }
+
+    header{
+        padding: 2rem 3rem;
+        position: relative;
+    }
+    .left-col{
+        width: 100%;
+        padding: 3rem 8rem;
+        text-align: center;
+    }
+
+    .left-col p{
+        max-width: none;
+    }
+
+    .left-col .user-email{
+        max-width: none;
+    }
+
+    .right-col{
+        width: 100%;
+        background: url(images/hero-mobile.jpg) no-repeat;
+        background-size: cover;
+        background-position: center top;
+        height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .left-col{
+        padding: 3rem;
+    }
+}
+
+
+@media only screen and (max-width: 445px){
+    .left-col{
+        padding: 3rem 1rem;
+    }
+}
